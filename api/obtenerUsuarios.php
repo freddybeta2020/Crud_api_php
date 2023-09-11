@@ -5,12 +5,12 @@
     header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
     header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 
-    require "conexion.php";
+    require "../api/conexion.php";
     
     // PRUEBAS
     //$usuario = "cheko";
     
-    $sql = "SELECT * FROM usuarios";
+    $sql = "SELECT * FROM usuario";
     $query = $mysqli->query($sql);
     
     $datos = array();

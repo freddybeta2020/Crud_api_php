@@ -1,7 +1,7 @@
-const urlObtenerUsuarios = 'http://localhost/CRUD_MySQL_PHP_JavaScript/api/obtenerUsuarios.php'
-const urlAgregarUsuario = 'http://localhost/CRUD_MySQL_PHP_JavaScript/api/agregarUsuario.php'
-const urlEditarUsuario = 'http://localhost/CRUD_MySQL_PHP_JavaScript/api/editarUsuario.php'
-const urlBorrarUsuario = 'http://localhost/CRUD_MySQL_PHP_JavaScript/api/borrarUsuario.php'
+const urlObtenerUsuarios = '../Crud_api_php/api/obtenerUsuarios.php'
+const urlAgregarUsuario = '../Crud_api_php/api/agregarUsuario.php'
+const urlEditarUsuario = '../Crud_api_php/api/editarUsuario.php'
+const urlBorrarUsuario = '../Crud_api_php/api/borrarUsuario.php'
 
 let listaEmpleados = []
 
@@ -96,7 +96,7 @@ async function agregarEmpleado() {
         })
         .then(respuesta => respuesta.json())
         .then(data => data)
-        .catch(error => alert(error))
+        .catch(error => console.log(error))
 
     if(res.msg === 'OK') {
         alert('Se registro exitosamente')
@@ -121,7 +121,7 @@ async function editarEmpleado() {
         })
         .then(respuesta => respuesta.json())
         .then(data => data)
-        .catch(error => alert(error))
+        .catch(error => console.log(error))
 
     if(res.msg === 'OK')  {
         alert('Se actualizó correctamente')

@@ -1,7 +1,7 @@
 <?php
     
     // Variables de la conexion a la DB
-    $mysqli = new mysqli("localhost","root","","pruebas");
+    $mysqli = new mysqli("localhost","root","","crudd_api");
     
     // Comprobamos la conexion
     if($mysqli->connect_errno) {

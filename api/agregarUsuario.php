@@ -5,13 +5,13 @@
     header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
     header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 
-    require "conexion.php";
+    require "./conexion.php";
 
     $json = file_get_contents("php://input");
     
     $objEmpleado = json_decode($json);
 
-    $sql = "INSERT INTO usuarios(usuario, contrasena, email) VALUES('$objEmpleado->usuario', '$objEmpleado->contrasena', '$objEmpleado->email')";
+    $sql = "INSERT INTO usuario(`usuario`, `contrasena`, `email`) VALUES('$objEmpleado->usuario', '$objEmpleado->contrasena', '$objEmpleado->email')";
     
     $query = $mysqli->query($sql);
 
